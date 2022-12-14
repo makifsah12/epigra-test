@@ -32,8 +32,10 @@ You should make a PHP artisan command to get all data from SpaceX API and sync t
 - Bu madde için php artisan test komutlarını kullanabilirsiniz.
   You should implement swagger/graphql-playground or a similar framework for API/GrahpQL documentation.
 - Bu madde de gerekli swagger işlemini uyguladım. 
-- npm run dev aracılığyla vite ı çalıştırdan sonra artisan serv de yapıp route kısmında /swagger ekleyerek bu swagger implementation u görebilirsiniz
+- npm run dev aracılığyla vite ı çalıştırdan sonra artisan serv de yapıp route kısmında /swagger ekleyerek bu swagger implementation u görebilirsiniz.
+
   You should implement Laravel Sanctum 
+  
 - Bu madde için gerekli açıklamaları yukarıda yaptım , Başka sorunlar için mail üzerinden haberleşebiliriz.
 - 
 - - ## About Laravel
