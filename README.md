@@ -7,7 +7,36 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Proje Hakkında Bilgiler , Soruları Maddeler Halinde Sıralayarak Gerekli Açıklamaları Yazacağım
+You should make a PHP artisan command to get all data from SpaceX API and sync them into the database every 3 minutes.
+- Bu madde için , php artisan spacex:syncData komutunu yazdım , bu komutla beraber 3 dakika da bir bu linkte veri varmı diye kontrol edip database ye yazıyor.
+- Database i localde oluşturdum
+- Tablo İsmim Belirttiğiniz gibi tbl:01 oldu
+- Bu maddede command üzerinde de belirttiğim gibi aynı kapsül adı veri seri numarasıyla ikinci bir satırın olmayacağını varsaydım.
+  You should make an Event/Listener to fire it when the sync is started and completed. And send a mail (channel) notification to the admin user.
+- Bu maddede ilk önce normal event metodlarını çapırdım fakat localden bu mesajları okuyamadığım için pusher app kullandım.
+- Bu app sayesinde sync in başlayıp bittiğini görebiliyorum.
+- Bu konu hakıında gerekli görselleri storage klasörü içerisine atıyor olacağım
+  You should write a log when the sync is complete. (It should log the whole JSON)
+- Bu maddede ise sync bittiği anda local log a bütün api den gelen veriyi loglayıp yazdırdım.
+  You should make endpoints/queries to show capsule details.
+- Bu maddede için api.php klasöründe birkaç açıklama yazdım.
+- Hem public hemde auth sanctum kullnarak api den veri çekebiliyoruz.
+- Api den veri çekim için 3 adet route belirledim . Bu routeları api.php de görebilirsiniz.
+- Bu routeların gerekli validation kuralları yapıldı.
+- Bu routelara query params şeklinde filtreleme seçenekleri ekledim.
+- Filtreleri postman yada herhangi bir yerden göndererek istediğiniz veriye erişebilirsiniz.
+- Auth kullanrak veri çekmek için ilk önce register olmamız gerekiyor. Burdaki diğer detayları api.php dosyasında görebilirsiniz.
+  You should write an integration test to cover all endpoints.
+  You should write an integration test to cover artisan command.
+- Bu madde için php artisan test komutlarını kullanabilirsiniz.
+  You should implement swagger/graphql-playground or a similar framework for API/GrahpQL documentation.
+- Bu madde de gerekli swagger işlemini uyguladım. 
+- npm run dev aracılığyla vite ı çalıştırdan sonra artisan serv de yapıp route kısmında /swagger ekleyerek bu swagger implementation u görebilirsiniz
+  You should implement Laravel Sanctum 
+- Bu madde için gerekli açıklamaları yukarıda yaptım , Başka sorunlar için mail üzerinden haberleşebiliriz.
+- 
+- - ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 

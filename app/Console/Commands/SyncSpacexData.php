@@ -36,7 +36,6 @@ class SyncSpacexData extends Command
     public function handle()
     {
         // Burada aynı kapsül adı ve seri numarasıyla ikinci bir data olamayacağını umdum.
-        // Burdaki dataların hiç bir zaman yenilenmeyeceğini öğrendim. V4 apisine geçiş yapmamız gerekiyormuş
         // Table ı kendim oluşturdum migrate yapmamız lazım
         $link = "https://api.spacexdata.com/v3/capsules";
         $pusher = new Pusher("03af2c540f7cf5eae906", "4cbcaf77a7a0e515f808", "1524899", array('cluster' => 'eu'));

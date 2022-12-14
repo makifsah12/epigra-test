@@ -15,7 +15,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('spacex:syncData')->everyMinute();
+        $schedule->command('spacex:syncData')->everyThreeMinutes();
     }
 
     /**
