@@ -1,0 +1,59 @@
+openapi: 3.0.0
+info:
+  title: Spacex API
+  description: We can get Capsule Data From Our Route
+  version: 0.1.9
+servers:
+  - url: http://127.0.0.1:8000/api
+    description: local server
+  - url: http://producation.app/api
+    description: production server
+paths:
+  /get-all-data:
+    get:
+      summary: Returns all data from our database.
+      responses:
+        '200':
+          description: A JSON of capsule datas
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  /get-data-by-status/:
+    get:
+      summary: Returns data filtered by status.
+      parameters:
+      - in: query
+        name: status
+        schema:
+          type: string
+          description: You should enter the status that you want to filter
+      responses:
+        '200':
+          description: A JSON of capsule datas by your filter
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  /get-data-by-capsule/:
+    get:
+      summary: Returns data filtered by capsules.
+      parameters:
+        - in: query
+          name: capsule
+          schema:
+            type: string
+            description: You should enter the capsule name that you want to filter
+      responses:
+        '200':
+          description: A JSON of capsule datas by your filter
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
